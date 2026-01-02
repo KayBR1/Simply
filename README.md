@@ -41,5 +41,5 @@ import simply as s
 window = s.window(100,100,"mouse position")
 
 while True:
-    window.draw.text((255,255,255),str(window.mouse_pos()["x"])+str(window.mouse_pos()["y"]),0,0)
+    window.draw.text((255,255,255),str(window.mouse_pos()["x"])+", "+str(window.mouse_pos()["y"]),0,0)
 ```
