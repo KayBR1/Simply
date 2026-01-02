@@ -6,7 +6,7 @@ colors = {
 "red": (255,0,0),
 "orange": (255,150,0),
 "yellow": (255,255,0),
-"limr": (175,255,0),
+"lime": (175,255,0),
 "green": (0,255,0),
 "sea": (0,255,175),
 "cyan": (0,255,255),
@@ -71,4 +71,4 @@ class Window:
             self.window.screen.blit(pg.font.SysFont(font,size,True,False).render(text,False,color),(x,y))
 
         def image(self, path:str, x:float, y:float) -> None:
-            self.window.screen.blit(pg.image.load(path).convert_alpha(),x,y)
+            self.window.screen.blit(pg.image.load(path).convert_alpha(),(x,y))
