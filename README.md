@@ -1,5 +1,5 @@
 # Simply
-Just a python library created to a alternative from pygame
+a thin layer of simplicity over pygame
 
 # how to use:
 ## create screen
