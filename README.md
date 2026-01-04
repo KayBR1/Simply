@@ -36,7 +36,7 @@ please put `quit()` command on your loop
 window.draw.text(color, text, x, y, font, size)
 ```
 
-## user input
+## user input(1.1.0 feature)
 when you `window.mouse_pos()` it returns a dictionary, example:
 ``` python
 import simply as s
@@ -60,3 +60,6 @@ while True:
 ```
 
 and you can get mouse pressing with `mouse_down()`
+
+## images and sound(1.1.0 features)
+to play sound use `window.sound(path)` and to display images use `window.draw.image(path, x, y, width, height, angle)`
