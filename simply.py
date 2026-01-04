@@ -86,6 +86,6 @@ class Window:
         # image rendering
         def image(self, path:str, x:float, y:float, width:float=1, height:float=1, angle:int=0) -> None:
             image = pg.image.load(path)
-            resized = pg.transform.scale_by(image, (width, height))
-            rotated = pg.transform.rotate(resized, -angle)
-            self.window.screen.blit(rotated,(x,y))
+            image = pg.transform.scale_by(image, (width, height))
+            image = pg.transform.rotate(resized, -angle)
+            self.window.screen.blit(image,(x,y))
