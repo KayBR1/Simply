@@ -21,19 +21,22 @@ window.draw.line(color, sx, sy, ex, ey  thickness) # line
 update to show the draw:
 
 ``` python
-window.clear()
+window.update()
 ```
 
 when you finish drawing you need to clear all with:
 ```python
 window.clear()
 ```
+
+please put `quit()` command on your loop
+
 ## writting
 ``` python
 window.draw.text(color, text, x, y, font, size)
 ```
 
-## getting mouse position
+## user input
 when you `window.mouse_pos()` it returns a dictionary, example:
 ``` python
 import simply as s
@@ -41,5 +44,19 @@ import simply as s
 window = s.window(100,100,"mouse position")
 
 while True:
-    window.draw.text((255,255,255),str(window.mouse_pos()["x"])+", "+str(window.mouse_pos()["y"]),0,0)
+   window.draw.text((255,255,255),str(window.mouse_pos()["x"])+", "+str(window.mouse_pos()["y"]),0,0)
 ```
+
+you can get key pressing with `window.input.key_down(key)`
+``` python
+print("press key A")
+while True:
+   quit()
+   if window.input.key_down("K_A"):
+      window.draw.text((255,255,255),"key A pressed!",0,0)
+      sleep(0.5)
+   window.update()
+   window.clear()
+```
+
+and you can get mouse pressing with `mouse_down()`
